@@ -156,8 +156,11 @@ int main()
 			break;
 		}
 		case '4':
-			obj.postorder(obj.ROOT);
+		{obj.postorder(obj.ROOT);
 			break;
 		}
+		case '5':
+			return 0;
+		
 	}
 }
