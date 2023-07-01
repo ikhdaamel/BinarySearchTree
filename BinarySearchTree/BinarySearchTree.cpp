@@ -137,7 +137,7 @@ int main()
 
 		switch (ch)
 		{
-		case '1' :
+		case '1':
 		{
 			cout << "enter a word : ";
 			string word;
@@ -157,14 +157,15 @@ int main()
 		}
 		case '4':
 		{obj.postorder(obj.ROOT);
-			break;
+		break;
 		}
 		case '5':
 			return 0;
-		default :
-		{ 
+		default:
+		{
 			cout << "invalid option" << endl;
 			break;
+		}
 		}
 	}
 }
