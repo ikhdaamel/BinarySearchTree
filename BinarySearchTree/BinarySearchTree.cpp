@@ -24,11 +24,11 @@ public:
 	Node* ROOT;
 
 	BinaryTree()
-	{
-		ROOT = NULL;				//initializing ROOT to null
+	{	
+		ROOT = NULL;											//initializing ROOT to null
 	}
 
-	void insert(string element)		//insert a node in the binary search tree
+	void insert(string element)									//insert a node in the binary search tree
 	{
 		Node* newNode = new Node(element, NULL, NULL);			//allocate memory for the new node
 		newNode->info = element;								//assign value to the data field of the new node
@@ -38,5 +38,11 @@ public:
 		Node* parent = NULL;
 		Node* currentNode = NULL;
 		search(element, parent, currentNode);					//locate the node which will be the parent of the node to be inserted
+	
+		if (parent == NULL)										//if the parent is NULL (tree is empty)
+		{
+			ROOT = newNode;										//mark the new node as root
+			return;												//exit
+		}
 	}
 };
